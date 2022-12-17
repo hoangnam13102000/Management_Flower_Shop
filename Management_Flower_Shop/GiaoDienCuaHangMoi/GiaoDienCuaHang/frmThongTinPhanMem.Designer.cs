@@ -36,9 +36,9 @@ namespace GiaoDienCuaHang
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(427, 187);
+            this.pictureBox1.Size = new System.Drawing.Size(613, 465);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -48,7 +48,7 @@ namespace GiaoDienCuaHang
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(501, 233);
+            this.ClientSize = new System.Drawing.Size(616, 465);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FormTTPM";
             this.Text = "Thong Tin Phan Mem";

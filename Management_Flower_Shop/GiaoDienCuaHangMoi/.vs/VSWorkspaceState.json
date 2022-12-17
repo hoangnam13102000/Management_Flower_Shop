@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\GiaoDienCuaHang",
-    "\\GiaoDienCuaHang\\obj"
+    "\\GiaoDienCuaHang\\BusinessLayer",
+    "\\GiaoDienCuaHang\\Controller",
+    "\\GiaoDienCuaHang\\DataLayer"
   ],
-  "SelectedNode": "\\GiaoDienCuaHang\\FormMain.cs",
+  "SelectedNode": "\\GiaoDienCuaHang\\BusinessLayer\\NhaCungCapInfo.cs",
   "PreviewInSolutionExplorer": false
 }

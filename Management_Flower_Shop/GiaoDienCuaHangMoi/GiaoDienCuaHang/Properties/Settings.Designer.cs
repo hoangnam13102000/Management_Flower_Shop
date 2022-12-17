@@ -22,5 +22,16 @@ namespace GiaoDienCuaHang.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-ON9V604\\SQLEXPRESS01;Initial Catalog=QLCHmoi2;Integrated Secu" +
+            "rity=True")]
+        public string QLCHmoi2ConnectionString {
+            get {
+                return ((string)(this["QLCHmoi2ConnectionString"]));
+            }
+        }
     }
 }

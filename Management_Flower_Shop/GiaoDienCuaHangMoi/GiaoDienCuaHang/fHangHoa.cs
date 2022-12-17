@@ -83,5 +83,10 @@ namespace GiaoDienCuaHang
         {
 
         }
+
+        private void labelTTHH_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -74,5 +74,10 @@ namespace GiaoDienCuaHang
         {
 
         }
+
+        private void labelkhachhang_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

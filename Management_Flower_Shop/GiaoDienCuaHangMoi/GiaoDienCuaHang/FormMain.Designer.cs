@@ -84,30 +84,31 @@
             this.toolStripButtonPNH = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTKH = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonTNCC = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
             this.taskPane1 = new XPExplorerBar.TaskPane();
             this.expandoQL = new XPExplorerBar.Expando();
             this.taskItemKH = new XPExplorerBar.TaskItem();
             this.taskItemNCC = new XPExplorerBar.TaskItem();
             this.taskItemDVT = new XPExplorerBar.TaskItem();
+            this.taskItemHH = new XPExplorerBar.TaskItem();
             this.expandoLP = new XPExplorerBar.Expando();
             this.taskItemBH = new XPExplorerBar.TaskItem();
             this.taskItemDH = new XPExplorerBar.TaskItem();
             this.taskItemNH = new XPExplorerBar.TaskItem();
             this.taskItemSC = new XPExplorerBar.TaskItem();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.helpProvider1 = new System.Windows.Forms.HelpProvider();
-            this.taskItemHH = new XPExplorerBar.TaskItem();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).BeginInit();
             this.taskPane1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expandoQL)).BeginInit();
             this.expandoQL.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.expandoLP)).BeginInit();
             this.expandoLP.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -612,6 +613,36 @@
             this.toolStripButtonTNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonTNCC.Click += new System.EventHandler(this.toolStripButtonTNCC_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel2});
+            this.statusStrip1.Location = new System.Drawing.Point(181, 486);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(525, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "Quản Lý Cửa Hàng";
+            this.notifyIcon1.Visible = true;
+            // 
+            // helpProvider1
+            // 
+            this.helpProvider1.HelpNamespace = "D:\\Cong cu moi truong\\Ngay13-1-2008\\Thanhtruc\\Thanhtruc\\GiaoDienCuaHangMoi\\GiaoDi" +
+    "enCuaHang\\bin\\Debug\\Help.chm";
+            // 
             // taskPane1
             // 
             this.taskPane1.AutoScrollMargin = new System.Drawing.Size(12, 12);
@@ -621,7 +652,7 @@
             this.expandoLP});
             this.taskPane1.Location = new System.Drawing.Point(0, 79);
             this.taskPane1.Name = "taskPane1";
-            this.taskPane1.Size = new System.Drawing.Size(184, 429);
+            this.taskPane1.Size = new System.Drawing.Size(181, 429);
             this.taskPane1.TabIndex = 2;
             this.taskPane1.Text = "taskPane1";
             // 
@@ -638,7 +669,7 @@
             this.taskItemHH});
             this.expandoQL.Location = new System.Drawing.Point(12, 12);
             this.expandoQL.Name = "expandoQL";
-            this.expandoQL.Size = new System.Drawing.Size(160, 190);
+            this.expandoQL.Size = new System.Drawing.Size(157, 190);
             this.expandoQL.TabIndex = 0;
             this.expandoQL.Text = "Quản Lý";
             // 
@@ -646,13 +677,15 @@
             // 
             this.taskItemKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemKH.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemKH.BackColor = System.Drawing.Color.LightGray;
             this.taskItemKH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemKH.Image")));
             this.taskItemKH.Location = new System.Drawing.Point(28, 26);
             this.taskItemKH.Name = "taskItemKH";
-            this.taskItemKH.Size = new System.Drawing.Size(124, 26);
+            this.helpProvider1.SetShowHelp(this.taskItemKH, false);
+            this.taskItemKH.Size = new System.Drawing.Size(121, 36);
             this.taskItemKH.TabIndex = 0;
             this.taskItemKH.Text = "Khách Hàng";
+            this.taskItemKH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemKH.UseVisualStyleBackColor = false;
             this.taskItemKH.Click += new System.EventHandler(this.taskItemKH_Click);
             // 
@@ -660,13 +693,14 @@
             // 
             this.taskItemNCC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemNCC.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemNCC.BackColor = System.Drawing.Color.LightGray;
             this.taskItemNCC.Image = ((System.Drawing.Image)(resources.GetObject("taskItemNCC.Image")));
-            this.taskItemNCC.Location = new System.Drawing.Point(28, 58);
+            this.taskItemNCC.Location = new System.Drawing.Point(28, 68);
             this.taskItemNCC.Name = "taskItemNCC";
-            this.taskItemNCC.Size = new System.Drawing.Size(124, 29);
+            this.taskItemNCC.Size = new System.Drawing.Size(121, 40);
             this.taskItemNCC.TabIndex = 1;
             this.taskItemNCC.Text = "Nhà Cung Cấp";
+            this.taskItemNCC.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemNCC.UseMnemonic = false;
             this.taskItemNCC.UseVisualStyleBackColor = false;
             this.taskItemNCC.Click += new System.EventHandler(this.taskItemNCC_Click);
@@ -675,15 +709,31 @@
             // 
             this.taskItemDVT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemDVT.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemDVT.BackColor = System.Drawing.Color.LightGray;
             this.taskItemDVT.Image = ((System.Drawing.Image)(resources.GetObject("taskItemDVT.Image")));
-            this.taskItemDVT.Location = new System.Drawing.Point(28, 125);
+            this.taskItemDVT.Location = new System.Drawing.Point(28, 153);
             this.taskItemDVT.Name = "taskItemDVT";
-            this.taskItemDVT.Size = new System.Drawing.Size(124, 26);
+            this.taskItemDVT.Size = new System.Drawing.Size(121, 33);
             this.taskItemDVT.TabIndex = 3;
             this.taskItemDVT.Text = "Đơn Vị Tính";
+            this.taskItemDVT.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemDVT.UseVisualStyleBackColor = false;
             this.taskItemDVT.Click += new System.EventHandler(this.taskItemDVT_Click);
+            // 
+            // taskItemHH
+            // 
+            this.taskItemHH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemHH.BackColor = System.Drawing.Color.LightGray;
+            this.taskItemHH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemHH.Image")));
+            this.taskItemHH.Location = new System.Drawing.Point(28, 114);
+            this.taskItemHH.Name = "taskItemHH";
+            this.taskItemHH.Size = new System.Drawing.Size(121, 33);
+            this.taskItemHH.TabIndex = 2;
+            this.taskItemHH.Text = "Hàng Hóa";
+            this.taskItemHH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.taskItemHH.UseVisualStyleBackColor = false;
+            this.taskItemHH.Click += new System.EventHandler(this.taskItemHH_Click);
             // 
             // expandoLP
             // 
@@ -698,7 +748,7 @@
             this.taskItemSC});
             this.expandoLP.Location = new System.Drawing.Point(12, 214);
             this.expandoLP.Name = "expandoLP";
-            this.expandoLP.Size = new System.Drawing.Size(160, 207);
+            this.expandoLP.Size = new System.Drawing.Size(157, 207);
             this.expandoLP.TabIndex = 1;
             this.expandoLP.Text = "Lập Phiếu";
             // 
@@ -706,13 +756,14 @@
             // 
             this.taskItemBH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemBH.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemBH.BackColor = System.Drawing.Color.LightGray;
             this.taskItemBH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemBH.Image")));
             this.taskItemBH.Location = new System.Drawing.Point(28, 36);
             this.taskItemBH.Name = "taskItemBH";
-            this.taskItemBH.Size = new System.Drawing.Size(124, 34);
+            this.taskItemBH.Size = new System.Drawing.Size(121, 34);
             this.taskItemBH.TabIndex = 0;
             this.taskItemBH.Text = "Bán Hàng";
+            this.taskItemBH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemBH.UseVisualStyleBackColor = false;
             this.taskItemBH.Click += new System.EventHandler(this.taskItemBH_Click);
             // 
@@ -720,13 +771,14 @@
             // 
             this.taskItemDH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemDH.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemDH.BackColor = System.Drawing.Color.LightGray;
             this.taskItemDH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemDH.Image")));
             this.taskItemDH.Location = new System.Drawing.Point(28, 76);
             this.taskItemDH.Name = "taskItemDH";
-            this.taskItemDH.Size = new System.Drawing.Size(124, 35);
+            this.taskItemDH.Size = new System.Drawing.Size(121, 35);
             this.taskItemDH.TabIndex = 1;
             this.taskItemDH.Text = "Đặt Hàng";
+            this.taskItemDH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemDH.UseVisualStyleBackColor = false;
             this.taskItemDH.Click += new System.EventHandler(this.taskItemDH_Click);
             // 
@@ -734,13 +786,14 @@
             // 
             this.taskItemNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemNH.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemNH.BackColor = System.Drawing.Color.LightGray;
             this.taskItemNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemNH.Image")));
             this.taskItemNH.Location = new System.Drawing.Point(28, 117);
             this.taskItemNH.Name = "taskItemNH";
-            this.taskItemNH.Size = new System.Drawing.Size(124, 33);
+            this.taskItemNH.Size = new System.Drawing.Size(121, 33);
             this.taskItemNH.TabIndex = 2;
             this.taskItemNH.Text = "Nhận Hàng";
+            this.taskItemNH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemNH.UseVisualStyleBackColor = false;
             this.taskItemNH.Click += new System.EventHandler(this.taskItemNH_Click);
             // 
@@ -748,59 +801,23 @@
             // 
             this.taskItemSC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemSC.BackColor = System.Drawing.Color.Transparent;
+            this.taskItemSC.BackColor = System.Drawing.Color.LightGray;
             this.taskItemSC.Image = ((System.Drawing.Image)(resources.GetObject("taskItemSC.Image")));
             this.taskItemSC.Location = new System.Drawing.Point(28, 156);
             this.taskItemSC.Name = "taskItemSC";
-            this.taskItemSC.Size = new System.Drawing.Size(124, 24);
+            this.taskItemSC.Size = new System.Drawing.Size(121, 31);
             this.taskItemSC.TabIndex = 3;
             this.taskItemSC.Text = "Sự Cố";
+            this.taskItemSC.TextAlign = System.Drawing.ContentAlignment.TopLeft;
             this.taskItemSC.UseVisualStyleBackColor = false;
             this.taskItemSC.Click += new System.EventHandler(this.taskItemSC_Click);
             // 
-            // statusStrip1
+            // toolStripStatusLabel2
             // 
-            this.statusStrip1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(184, 486);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(522, 22);
-            this.statusStrip1.TabIndex = 3;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(114, 17);
-            this.toolStripStatusLabel1.Text = "Quản Lý Cửa Hàng";
-            // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Quản Lý Cửa Hàng";
-            this.notifyIcon1.Visible = true;
-            // 
-            // helpProvider1
-            // 
-            this.helpProvider1.HelpNamespace = "D:\\Cong cu moi truong\\Ngay13-1-2008\\Thanhtruc\\Thanhtruc\\GiaoDienCuaHangMoi\\GiaoDi" +
-    "enCuaHang\\bin\\Debug\\Help.chm";
-            // 
-            // taskItemHH
-            // 
-            this.taskItemHH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemHH.BackColor = System.Drawing.Color.Transparent;
-            this.taskItemHH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemHH.Image")));
-            this.taskItemHH.Location = new System.Drawing.Point(28, 93);
-            this.taskItemHH.Name = "taskItemHH";
-            this.taskItemHH.Size = new System.Drawing.Size(124, 26);
-            this.taskItemHH.TabIndex = 2;
-            this.taskItemHH.Text = "Hàng Hóa";
-            this.taskItemHH.UseVisualStyleBackColor = false;
-            this.taskItemHH.Click += new System.EventHandler(this.taskItemHH_Click);
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabel2.Text = "Quản Lý Cửa Hàng Hoa";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // FormMain
             // 
@@ -823,14 +840,14 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.taskPane1)).EndInit();
             this.taskPane1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.expandoQL)).EndInit();
             this.expandoQL.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.expandoLP)).EndInit();
             this.expandoLP.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,15 +898,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButtonPNH;
         private System.Windows.Forms.ToolStripButton toolStripButtonTKH;
         private System.Windows.Forms.ToolStripButton toolStripButtonTNCC;
-        private XPExplorerBar.TaskPane taskPane1;
-        private XPExplorerBar.Expando expandoQL;
-        private XPExplorerBar.TaskItem taskItemKH;
-        private XPExplorerBar.TaskItem taskItemNCC;
-        private XPExplorerBar.Expando expandoLP;
-        private XPExplorerBar.TaskItem taskItemBH;
-        private XPExplorerBar.TaskItem taskItemDH;
-        private XPExplorerBar.TaskItem taskItemNH;
-        private XPExplorerBar.TaskItem taskItemSC;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem HienThiToolStripMenuItem;
@@ -905,7 +913,17 @@
         private System.Windows.Forms.ToolStripMenuItem tồnKhoToolStripMenuItem;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.HelpProvider helpProvider1;
-        private XPExplorerBar.TaskItem taskItemHH;
+        private XPExplorerBar.TaskPane taskPane1;
+        private XPExplorerBar.Expando expandoQL;
+        private XPExplorerBar.TaskItem taskItemKH;
+        private XPExplorerBar.TaskItem taskItemNCC;
         protected XPExplorerBar.TaskItem taskItemDVT;
+        private XPExplorerBar.TaskItem taskItemHH;
+        private XPExplorerBar.Expando expandoLP;
+        private XPExplorerBar.TaskItem taskItemBH;
+        private XPExplorerBar.TaskItem taskItemDH;
+        private XPExplorerBar.TaskItem taskItemNH;
+        private XPExplorerBar.TaskItem taskItemSC;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
     }
 }
