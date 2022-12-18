@@ -1,19 +1,19 @@
-IF EXISTS (SELECT * 
+﻿IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
-	   WHERE  name = N'QLCHmoi')
-	DROP DATABASE QLCHmoi
+	   WHERE  name = N'QLCHmoi2')
+	DROP DATABASE QLCHmoi2
 GO
 
-CREATE DATABASE QLCHmoi
+CREATE DATABASE QLCHmoi2
 GO
-USE QLCHmoi
+USE QLCHmoi2
 GO
 ------------------------------------
----------T?o c�c b?ng---------------
+---------T?o các b?ng---------------
 ------------------------------------
 
 -----------------------------------
-----------KH�CH H�NG-------------
+----------KHÁCH HÀNG-------------
 ------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -30,7 +30,7 @@ CREATE TABLE KHACHHANG
 GO
 
 -------------------------------------
------------L?AI NH�N VI�N------------
+-----------L?AI NHÂN VIÊN------------
 -------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -46,7 +46,7 @@ CREATE TABLE LOAINHANVIEN
 GO
 
 -------------------------------------
-------------GI?I T�NH-----------------
+------------GI?I TÍNH-----------------
 --------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -61,7 +61,7 @@ CREATE TABLE GIOITINH
 GO
 
 ------------------------------------
------------NH�N VI�N----------------
+-----------NHÂN VIÊN----------------
 ------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -83,7 +83,7 @@ CREATE TABLE NHANVIEN
 GO
 
 --------------------------------------
------------NH� CUNG C?P---------------
+-----------NHÀ CUNG C?P---------------
 --------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -100,7 +100,7 @@ CREATE TABLE NHACUNGCAP
 GO
 
 --------------------------------------
-------------�ON V? T�NH---------------
+------------ÐON V? TÍNH---------------
 --------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -115,7 +115,7 @@ CREATE TABLE DONVITINH
 GO
 
 --------------------------------------
-------------H�NG H�A----------------
+------------HÀNG HÓA----------------
 ------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -135,7 +135,7 @@ CREATE TABLE HANGHOA
 GO
 
 -------------------------------------
-------------PHI?U B�N H�NG-----------
+------------PHI?U BÁN HÀNG-----------
 -------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -154,7 +154,7 @@ CREATE TABLE PHIEUBANHANG
 GO
 
 -----------------------------------
-----------PHI?U �?T H�NG-----------
+----------PHI?U Ð?T HÀNG-----------
 -----------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -172,7 +172,7 @@ CREATE TABLE PHIEUDATHANG
 GO
 
 ----------------------------------------
------------PHI?U NH?N H�NG--------------
+-----------PHI?U NH?N HÀNG--------------
 -----------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -191,7 +191,7 @@ CREATE TABLE PHIEUNHANHANG
 GO
 
 --------------------------------------------
-------------CHI TI?T PHI?U B�N H�NG----------
+------------CHI TI?T PHI?U BÁN HÀNG----------
 --------------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -209,7 +209,7 @@ CREATE TABLE CHITIETPHIEUBANHANG
 GO
 
 -----------------------------------------------
-------------CHI TI?T PHI?U �?T H�NG-----------
+------------CHI TI?T PHI?U Ð?T HÀNG-----------
 ----------------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -225,7 +225,7 @@ CREATE TABLE CHITIETPHIEUDATHANG
 GO
 
 ---------------------------------------------
-----------CHI TI?T PHI?U NH?N H�NG------------
+----------CHI TI?T PHI?U NH?N HÀNG------------
 ---------------------------------------------
 IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
@@ -281,7 +281,7 @@ CREATE TABLE TONKHO
 GO
 
 ------------------------------------------
---==========T?O KH�A CH�NH==============
+--==========T?O KHÓA CHÍNH==============
 ------------------------------------------
 ALTER TABLE KHACHHANG
 ADD CONSTRAINT P_MAKH PRIMARY KEY(MAKH)
@@ -329,7 +329,7 @@ ALTER TABLE TONKHO
 ADD CONSTRAINT P_TONKHO PRIMARY KEY(THANG,NAM)
 
 ----------------------------------------------
---=============T?O KH�A NGO?I================
+--=============T?O KHÓA NGO?I================
 ----------------------------------------------
 ALTER TABLE NHANVIEN 
 ADD CONSTRAINT F_NV_GIOITINH FOREIGN KEY(GIOITINH) REFERENCES GIOITINH(GIOITINH)
@@ -352,7 +352,7 @@ ADD CONSTRAINT F_PDH_NHACUNGCAP FOREIGN KEY(MANCC) REFERENCES NHACUNGCAP(MANCC)
 ALTER TABLE PHIEUDATHANG 
 ADD CONSTRAINT F_PDH_NHANVIEN FOREIGN KEY(MANV) REFERENCES NHANVIEN(MANV)
 
-ALTER TABLE PHIEUNHAHANG 
+ALTER TABLE PHIEUNHANHANG 
 ADD CONSTRAINT FF_PNH_NHACUNGCAP FOREIGN KEY(MANCC) REFERENCES NHACUNGCAP(MANCC)
 
 ALTER TABLE PHIEUNHANHANG 
@@ -386,101 +386,90 @@ ADD CONSTRAINT F_TONKHO_HH FOREIGN KEY(MASP) REFERENCES HANGHOA(MAHH)
 --==============NH?P LI?U ====================
 -----------------------------------------------
 
---------------KH�CH H�NG-----------------
+--------------KHÁCH HÀNG-----------------
 INSERT INTO KHACHHANG
-VALUES('KH001','NGUYEN VAN A','THOAI SON','123456')
+VALUES('KH001',N'Nguyễn Văn Đồng',N'Quận 4 - Hồ Chí Minh','123456')
 
 INSERT INTO KHACHHANG
-VALUES('KH002','NGUYEN THI THANH','CHAU DOC','234567')
+VALUES('KH002',N'Nguyễn Thị Thanh',N'Quận 12 - Hồ Chí Minh','234567')
 
 INSERT INTO KHACHHANG
-VALUES('KH003','TRAN NGUYEN ANH THU','CHAU THANH','687456')
+VALUES('KH003',N'Trần Nguyễn Anh Thư',N'Quận Thủ Đức - Hồ Chí Minh','687456')
 
 INSERT INTO KHACHHANG
-VALUES('KH004','LE TRAN NGUYEN','THOAI SON','781236')
+VALUES('KH004',N'Lê Thái Sơn',N'Quận Bình Thạnh - Hồ Chí Minh','781236')
 
 INSERT INTO KHACHHANG
-VALUES('KH005','BUI DUC THINH','CAO LANH','124756')
+VALUES('KH005',N'Bùi Trung Hiếu',N'Đồng Tháp','124756')
 
------------------LO?I NH�N VI�N----------------
+-----------------LO?I NHÂN VIÊN----------------
 INSERT INTO LOAINHANVIEN
-VALUES('MNV001','QUAN LY')
+VALUES('MNV001',N'Quản Lý')
 
 INSERT INTO LOAINHANVIEN
-VALUES('MNV002','BAN HANG')
+VALUES('MNV002',N'Bán Hàng')
 
----------------GI?I T�NH--------------------
+---------------GI?I TÍNH--------------------
 INSERT INTO GIOITINH
-VALUES('GT001','NAM')
+VALUES('GT001','Nam')
 
 INSERT INTO GIOITINH
-VALUES('GT002','NU')
+VALUES('GT002',N'Nữ')
 
----------------NH�N VI�N------------------
+---------------NHÂN VIÊN------------------
 INSERT INTO NHANVIEN
-VALUES ('NV001','MAC THI HONG LAM','DONG THAP','10/10/1984','NU','012345','admin1','admin1','MNV001')
-
-INSERT INTO NHANVIEN
-VALUES ('NV002','TRAN QUOC TRUNG','TINH BIEN','05/11/1986','NAM','122345','admin2','admin2','MNV001')
+VALUES ('NV001',N'Hoàng Trung Nam',N'Bình Phước','10/13/2000','GT001','0969036498','admin1','admin1','MNV001')
 
 INSERT INTO NHANVIEN
-VALUES ('NV003','NGUYEN THI HONG VAN','CHAU DOC','12/05/1985','NU','067954','user1','user1','MNV002')
+VALUES ('NV002',N'Phạm Thanh Quan',N'Hồ Chí Minh','10/16/2001','GT001','0916129144','admin2','admin2','MNV001')
 
 INSERT INTO NHANVIEN
-VALUES ('NV004','CHE THI MAI HIEU','SA DEC','11/01/1987','NU','123489','user2','user2','MNV002')
+VALUES ('NV003',N'Hồ Thị Mỹ Dung',N'Hồ Chí Minh','05/12/2001','GT002','0567531074','user1','user1','MNV002')
 
 INSERT INTO NHANVIEN
-VALUES ('NV005','PHAM PHUOC NGUYEN','PHU TAN','02/03/1981','NAM','698745','user3','user3','MNV002')
+VALUES ('NV004',N'Nguyễn Thượng Hiền',N'Hồ Chí Minh','11/01/1999','GT002','0363880541','user2','user2','MNV002')
 
-------------------NH� CUNG C?P------------------
+INSERT INTO NHANVIEN
+VALUES ('NV005',N'Phạm Thoại',N'Hồ Chí Minh','02/03/1981','GT001','698745','user3','user3','MNV002')
+
+------------------NHÀ CUNG C?P------------------
 INSERT INTO NHACUNGCAP
-VALUES ('NCC001','NHA MAY THUOC LA �ONG THAP','CAO LANH-�ONG THAP','067987455')
-
-INSERT INTO NHACUNGCAP
-VALUES ('NCC002','NHA MAY BAI SAI GON','NGUYEN CHI THANH-TP HCM','08987455')
+VALUES ('NCC001',N'Hoa Yêu Thương',N'Quận 1 - Hồ Chí Minh','067987455')
 
 INSERT INTO NHACUNGCAP
-VALUES ('NCC003','CTY DUOC HAU GIANG','CAN THO','071897455')
+VALUES ('NCC002',N'Hoa Đà Lạt',N'Đà Lạt','08987455')
 
 INSERT INTO NHACUNGCAP
-VALUES ('NCC004','CTY BANH KEO BIEN HOA','BIEN HOA','0917987455')
+VALUES ('NCC003',N'Hoa Ngọc Bích',N'Cần Thơ','071897455')
 
-----------------�ON V? T�NH---------------------
-INSERT INTO DONVITINH
-VALUES ('DVT001','KILOGAM')
+INSERT INTO NHACUNGCAP
+VALUES ('NCC004',N'Hoa Cảnh',N'Bình Dương','0917987455')
 
+----------------ÐON V? TÍNH---------------------
 INSERT INTO DONVITINH
-VALUES ('DVT002','GOI')
-
-INSERT INTO DONVITINH
-VALUES ('DVT003','KET')
+VALUES ('DVT001',N'Bông')
 
 INSERT INTO DONVITINH
-VALUES ('DVT004','BIT')
+VALUES ('DVT002',N'Bó')
 
 INSERT INTO DONVITINH
-VALUES ('DVT005','THUNG')
+VALUES ('DVT003',N'Chậu')
 
------------------H�NG H�A----------------------
-INSERT INTO HANGHOA
-VALUES ('HH001','BIA SAI GON','DVT003','11/10/2008','200','20','5')
 
+-----------------HÀNG HÓA----------------------
 INSERT INTO HANGHOA
-VALUES ('HH002','KEO','DVT004','04/06/2007','300','100','10')
+VALUES ('HH001',N'Hoa Hồng','DVT001','11/10/2022','200','20','5')
 
 INSERT INTO HANGHOA
-VALUES ('HH003','�UONG','DVT001','10/12/2006','500','50','5')
+VALUES ('HH002',N'Hoa Cúc','DVT002','04/06/2022','50','1','1')
 
 INSERT INTO HANGHOA
-VALUES ('HH004','THUOC LA','DVT002','01/01/2008','200','10','5')
+VALUES ('HH003',N'Hoa Hướng Dương','DVT003','10/12/2022','100','50','5')
 
 INSERT INTO HANGHOA
-VALUES ('HH005','THUOC TAY','DVT005','06/06/2006','100','10','10')
+VALUES ('HH004',N'Hoa Tulip','DVT001','01/01/2022','200','10','5')
 
-INSERT INTO HANGHOA
-VALUES ('HH006','MUOI','DVT002','10/04/2008','400','50','10')
-
-----------PHI?U B�N H�NG---------------------
+----------PHI?U BÁN HÀNG---------------------
 INSERT INTO PHIEUBANHANG
 VALUES ('PBH001','KH001','NV002','10/11/2006','')
 
@@ -493,43 +482,40 @@ VALUES ('PBH003','KH002','NV001','12/04/2007','')
 INSERT INTO PHIEUBANHANG
 VALUES ('PBH004','KH001','NV004','05/09/2005','')
 
------------PHI?U �?T H�NG---------------------
+-----------PHI?U Ð?T HÀNG---------------------
 INSERT INTO PHIEUDATHANG
-VALUES ('PDH001','NCC001','NV002','10/11/2006')
-
-INSERT INTO PHIEUDATHANG
-VALUES ('PDH002','NCC002','NV004','07/10/2007')
+VALUES ('PDH001','NCC001','NV002','10/11/2022')
 
 INSERT INTO PHIEUDATHANG
-VALUES ('PDH003','NCC004','NV001','01/06/2006')
+VALUES ('PDH002','NCC002','NV004','07/10/2022')
 
--------------PHI?U NH?N H�NG------------------
+INSERT INTO PHIEUDATHANG
+VALUES ('PDH003','NCC004','NV001','01/06/2022')
+
+-------------PHI?U NH?N HÀNG------------------
 INSERT INTO PHIEUNHANHANG
-VALUES ('PNH001','NCC001','NV001','01/06/2007','')
+VALUES ('PNH001','NCC001','NV001','01/06/2022','')
 
 INSERT INTO PHIEUNHANHANG
-VALUES ('PNH002','NCC004','NV002','10/10/2006','')
+VALUES ('PNH002','NCC004','NV002','10/10/2022','')
 
 INSERT INTO PHIEUNHANHANG
-VALUES ('PNH003','NCC003','NV005','11/12/2006','')
+VALUES ('PNH003','NCC003','NV005','11/12/2022','')
 
--------------CHI TI?T PHI?U B�N H�NG------------
+-------------CHI TI?T PHI?U BÁN HÀNG------------
 INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH001','HH002','3000','100','300000')
-
-INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH002','HH001','5000','1000','5000000')
+VALUES ('PBH001','HH002','30','10','300000')
 
 INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH003','HH004','8000','200','1600000')
+VALUES ('PBH002','HH001','50','10','5000000')
 
 INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH004','HH005','6000','500','3000000')
+VALUES ('PBH003','HH003','80','20','1600000')
 
 INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH005','HH004','8000','500','4000000')
+VALUES ('PBH005','HH004','80','50','4000000')
 
--------------CHI TI?T PHI?U �?T H�NG------------
+-------------CHI TIET PHIEU ÐAT HÀNG------------
 INSERT INTO CHITIETPHIEUDATHANG
 VALUES ('PDH001','HH002','300')
 
@@ -537,17 +523,14 @@ INSERT INTO CHITIETPHIEUDATHANG
 VALUES ('PDH002','HH003','1000')
 
 INSERT INTO CHITIETPHIEUDATHANG
-VALUES ('PDH003','HH005','500')
+VALUES ('PDH003','HH001','200')
 
-INSERT INTO CHITIETPHIEUDATHANG
-VALUES ('PDH004','HH001','200')
-
-------------CHI TI?T PHI?U NH?N H�NG-----------
+------------CHI TI?T PHI?U NH?N HÀNG-----------
 INSERT INTO CHITIETPHIEUNHANHANG
 VALUES ('PNH001','HH004','5000','500','','PDH003')
 
 INSERT INTO CHITIETPHIEUNHANHANG
-VALUES ('PNH002','HH001','10000','200','','PDH004')
+VALUES ('PNH002','HH001','10000','200','','PDH002')
 
 INSERT INTO CHITIETPHIEUNHANHANG
 VALUES ('PNH003','HH002','15000','200','','PDH001')
@@ -558,9 +541,6 @@ VALUES ('PSC001','HH001','10/12/2005','','50','10000','')
 
 INSERT INTO PHIEUSUCO
 VALUES ('PSC002','HH002','01/01/2006','','100','15000','')
-
-
-
 ---------------T?N KHO------------------
 
 
