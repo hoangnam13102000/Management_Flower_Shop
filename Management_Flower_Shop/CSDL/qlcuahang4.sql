@@ -6,7 +6,7 @@ GO
 
 CREATE DATABASE QLCHmoi
 GO
-USE QLCHmoi3
+USE QLCHmoi
 GO
 ------------------------------------
 ---------T?o các b?ng---------------
