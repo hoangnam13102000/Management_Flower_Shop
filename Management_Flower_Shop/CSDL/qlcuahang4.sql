@@ -1,12 +1,12 @@
 ﻿IF EXISTS (SELECT * 
 	   FROM   master..sysdatabases 
-	   WHERE  name = N'QLCHmoi2')
-	DROP DATABASE QLCHmoi2
+	   WHERE  name = N'QLCHmoi')
+	DROP DATABASE QLCHmoi
 GO
 
-CREATE DATABASE QLCHmoi2
+CREATE DATABASE QLCHmoi
 GO
-USE QLCHmoi2
+USE QLCHmoi3
 GO
 ------------------------------------
 ---------T?o các b?ng---------------
@@ -512,8 +512,6 @@ VALUES ('PBH002','HH001','50','10','5000000')
 INSERT INTO CHITIETPHIEUBANHANG
 VALUES ('PBH003','HH003','80','20','1600000')
 
-INSERT INTO CHITIETPHIEUBANHANG
-VALUES ('PBH005','HH004','80','50','4000000')
 
 -------------CHI TIET PHIEU ÐAT HÀNG------------
 INSERT INTO CHITIETPHIEUDATHANG
