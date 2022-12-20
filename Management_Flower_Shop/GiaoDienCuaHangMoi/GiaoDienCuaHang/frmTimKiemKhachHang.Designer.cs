@@ -84,6 +84,7 @@
             this.groupBoxTimKH.TabIndex = 1;
             this.groupBoxTimKH.TabStop = false;
             this.groupBoxTimKH.Text = "Tìm Khách Hàng";
+            this.groupBoxTimKH.Enter += new System.EventHandler(this.groupBoxTimKH_Enter);
             // 
             // comboBoxCHONDIENTHOAI
             // 

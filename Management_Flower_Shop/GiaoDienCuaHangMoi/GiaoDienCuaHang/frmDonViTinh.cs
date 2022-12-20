@@ -34,7 +34,7 @@ namespace GiaoDienCuaHang
         }
         private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Ban chac chan muon xoa khong?", "Đơn Vị Tính", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Đơn Vị Tính", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             
             {
                 IEnumerator ie = dataGridView1.SelectedRows.GetEnumerator();
@@ -53,7 +53,6 @@ namespace GiaoDienCuaHang
                 e.Cancel = true;
             }
          }
-
         private void toolStripButtonLuu_Click(object sender, EventArgs e)
         {
             ctrl.Update();

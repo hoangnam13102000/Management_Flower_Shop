@@ -80,7 +80,7 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 210);
+            this.panel1.Size = new System.Drawing.Size(606, 210);
             this.panel1.TabIndex = 38;
             // 
             // groupBoxTT
@@ -106,7 +106,7 @@
             this.groupBoxTT.ForeColor = System.Drawing.Color.Blue;
             this.groupBoxTT.Location = new System.Drawing.Point(0, 60);
             this.groupBoxTT.Name = "groupBoxTT";
-            this.groupBoxTT.Size = new System.Drawing.Size(562, 150);
+            this.groupBoxTT.Size = new System.Drawing.Size(606, 150);
             this.groupBoxTT.TabIndex = 1;
             this.groupBoxTT.TabStop = false;
             this.groupBoxTT.Text = "Thông Tin";
@@ -129,7 +129,8 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Ngày Hết Hạn";
+            this.label1.Text = "Ngày Hêt Hạn";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dateTimePicker1
             // 
@@ -282,7 +283,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(562, 38);
+            this.bindingNavigator1.Size = new System.Drawing.Size(606, 38);
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.VisibleChanged += new System.EventHandler(this.bindingNavigator1_VisibleChanged);
@@ -401,7 +402,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 248);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(562, 84);
+            this.dataGridView1.Size = new System.Drawing.Size(606, 109);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dataGridView1_UserDeletingRow);
             // 
@@ -409,7 +410,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 332);
+            this.ClientSize = new System.Drawing.Size(606, 357);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bindingNavigator1);
             this.Controls.Add(this.panel1);

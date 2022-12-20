@@ -43,12 +43,12 @@
             this.labelMP = new System.Windows.Forms.Label();
             this.groupBoxDSPNH = new System.Windows.Forms.GroupBox();
             this.listViewpnh = new System.Windows.Forms.ListView();
-            this.columnHeaderSTT = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMP = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMNCC = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMNV = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderNL = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderTongT = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMNCC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderNL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderTongT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBPNH = new System.Windows.Forms.GroupBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -63,14 +63,14 @@
             this.lbDG = new System.Windows.Forms.Label();
             this.groupBDSCTPNH = new System.Windows.Forms.GroupBox();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.colSTT = new System.Windows.Forms.ColumnHeader();
-            this.colHMP = new System.Windows.Forms.ColumnHeader();
-            this.colH = new System.Windows.Forms.ColumnHeader();
-            this.colHDG = new System.Windows.Forms.ColumnHeader();
-            this.colHSL = new System.Windows.Forms.ColumnHeader();
-            this.colHTT = new System.Windows.Forms.ColumnHeader();
-            this.colHMPDH = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.colSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHMP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHDG = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHSL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHMPDH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.expandoCNPNH = new XPExplorerBar.Expando();
             this.taskItemThemPNH = new XPExplorerBar.TaskItem();
             this.taskItemXoaPNH = new XPExplorerBar.TaskItem();
@@ -161,9 +161,10 @@
             this.labelMNCC.ForeColor = System.Drawing.Color.Purple;
             this.labelMNCC.Location = new System.Drawing.Point(6, 52);
             this.labelMNCC.Name = "labelMNCC";
-            this.labelMNCC.Size = new System.Drawing.Size(117, 16);
+            this.labelMNCC.Size = new System.Drawing.Size(95, 16);
             this.labelMNCC.TabIndex = 1;
-            this.labelMNCC.Text = "Mã Nhà Cung Cấp";
+            this.labelMNCC.Text = "Nhà Cung Cấp";
+            this.labelMNCC.Click += new System.EventHandler(this.labelMNCC_Click);
             // 
             // labelTT
             // 
@@ -199,9 +200,9 @@
             this.labelMNV.ForeColor = System.Drawing.Color.Purple;
             this.labelMNV.Location = new System.Drawing.Point(6, 86);
             this.labelMNV.Name = "labelMNV";
-            this.labelMNV.Size = new System.Drawing.Size(90, 16);
+            this.labelMNV.Size = new System.Drawing.Size(95, 16);
             this.labelMNV.TabIndex = 2;
-            this.labelMNV.Text = "Mã Nhân viên";
+            this.labelMNV.Text = "Tên Nhân viên";
             // 
             // labelMP
             // 
@@ -237,6 +238,7 @@
             this.listViewpnh.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewpnh.FullRowSelect = true;
             this.listViewpnh.GridLines = true;
+            this.listViewpnh.HideSelection = false;
             this.listViewpnh.Location = new System.Drawing.Point(3, 18);
             this.listViewpnh.Name = "listViewpnh";
             this.listViewpnh.Size = new System.Drawing.Size(425, 147);
@@ -423,6 +425,7 @@
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(3, 18);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(529, 96);
@@ -490,8 +493,8 @@
             // 
             // taskItemThemPNH
             // 
-            this.taskItemThemPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemThemPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemThemPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemThemPNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemThemPNH.Image")));
             this.taskItemThemPNH.Location = new System.Drawing.Point(8, 25);
@@ -505,8 +508,8 @@
             // 
             // taskItemXoaPNH
             // 
-            this.taskItemXoaPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemXoaPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemXoaPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemXoaPNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemXoaPNH.Image")));
             this.taskItemXoaPNH.Location = new System.Drawing.Point(8, 55);
@@ -520,8 +523,8 @@
             // 
             // taskItemSuaPNH
             // 
-            this.taskItemSuaPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemSuaPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemSuaPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemSuaPNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemSuaPNH.Image")));
             this.taskItemSuaPNH.Location = new System.Drawing.Point(8, 86);
@@ -534,8 +537,8 @@
             // 
             // taskItemLuuPNH
             // 
-            this.taskItemLuuPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemLuuPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemLuuPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemLuuPNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemLuuPNH.Image")));
             this.taskItemLuuPNH.Location = new System.Drawing.Point(8, 124);
@@ -549,8 +552,8 @@
             // 
             // taskItemInPNH
             // 
-            this.taskItemInPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemInPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemInPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemInPNH.Image = null;
             this.taskItemInPNH.Location = new System.Drawing.Point(8, 161);
@@ -564,8 +567,8 @@
             // 
             // taskItemTimPDH
             // 
-            this.taskItemTimPDH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemTimPDH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemTimPDH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemTimPDH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemTimPDH.Image")));
             this.taskItemTimPDH.Location = new System.Drawing.Point(8, 183);
@@ -579,8 +582,8 @@
             // 
             // taskItemTimPNH
             // 
-            this.taskItemTimPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemTimPNH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskItemTimPNH.BackColor = System.Drawing.Color.Transparent;
             this.taskItemTimPNH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemTimPNH.Image")));
             this.taskItemTimPNH.Location = new System.Drawing.Point(8, 210);

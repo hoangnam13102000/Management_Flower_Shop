@@ -86,11 +86,12 @@
             this.toolStripButtonTNCC = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.helpProvider1 = new System.Windows.Forms.HelpProvider();
+            this.taskItemKH = new XPExplorerBar.TaskItem();
             this.taskPane1 = new XPExplorerBar.TaskPane();
             this.expandoQL = new XPExplorerBar.Expando();
-            this.taskItemKH = new XPExplorerBar.TaskItem();
             this.taskItemNCC = new XPExplorerBar.TaskItem();
             this.taskItemDVT = new XPExplorerBar.TaskItem();
             this.taskItemHH = new XPExplorerBar.TaskItem();
@@ -99,7 +100,6 @@
             this.taskItemDH = new XPExplorerBar.TaskItem();
             this.taskItemNH = new XPExplorerBar.TaskItem();
             this.taskItemSC = new XPExplorerBar.TaskItem();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -123,7 +123,7 @@
             this.HienThiToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(706, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(763, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -521,7 +521,7 @@
             this.toolStripButtonTNCC});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(706, 55);
+            this.toolStrip1.Size = new System.Drawing.Size(763, 55);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -608,7 +608,7 @@
             this.toolStripButtonTNCC.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripButtonTNCC.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButtonTNCC.Name = "toolStripButtonTNCC";
-            this.toolStripButtonTNCC.Size = new System.Drawing.Size(112, 51);
+            this.toolStripButtonTNCC.Size = new System.Drawing.Size(112, 52);
             this.toolStripButtonTNCC.Text = "Tìm Nhà Cung Cấp";
             this.toolStripButtonTNCC.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButtonTNCC.Click += new System.EventHandler(this.toolStripButtonTNCC_Click);
@@ -621,7 +621,7 @@
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(181, 486);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(525, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(582, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -631,6 +631,13 @@
             this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+            // 
+            // toolStripStatusLabel2
+            // 
+            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
+            this.toolStripStatusLabel2.Size = new System.Drawing.Size(131, 17);
+            this.toolStripStatusLabel2.Text = "Quản Lý Cửa Hàng Hoa";
+            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
             // 
             // notifyIcon1
             // 
@@ -642,6 +649,22 @@
             // 
             this.helpProvider1.HelpNamespace = "D:\\Cong cu moi truong\\Ngay13-1-2008\\Thanhtruc\\Thanhtruc\\GiaoDienCuaHangMoi\\GiaoDi" +
     "enCuaHang\\bin\\Debug\\Help.chm";
+            // 
+            // taskItemKH
+            // 
+            this.taskItemKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.taskItemKH.BackColor = System.Drawing.Color.LightGray;
+            this.taskItemKH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemKH.Image")));
+            this.taskItemKH.Location = new System.Drawing.Point(28, 26);
+            this.taskItemKH.Name = "taskItemKH";
+            this.helpProvider1.SetShowHelp(this.taskItemKH, false);
+            this.taskItemKH.Size = new System.Drawing.Size(121, 36);
+            this.taskItemKH.TabIndex = 0;
+            this.taskItemKH.Text = "Khách Hàng";
+            this.taskItemKH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.taskItemKH.UseVisualStyleBackColor = false;
+            this.taskItemKH.Click += new System.EventHandler(this.taskItemKH_Click);
             // 
             // taskPane1
             // 
@@ -662,6 +685,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.expandoQL.ExpandedHeight = 190;
             this.expandoQL.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expandoQL.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.expandoQL.Items.AddRange(new System.Windows.Forms.Control[] {
             this.taskItemKH,
             this.taskItemNCC,
@@ -672,22 +696,6 @@
             this.expandoQL.Size = new System.Drawing.Size(157, 190);
             this.expandoQL.TabIndex = 0;
             this.expandoQL.Text = "Quản Lý";
-            // 
-            // taskItemKH
-            // 
-            this.taskItemKH.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.taskItemKH.BackColor = System.Drawing.Color.LightGray;
-            this.taskItemKH.Image = ((System.Drawing.Image)(resources.GetObject("taskItemKH.Image")));
-            this.taskItemKH.Location = new System.Drawing.Point(28, 26);
-            this.taskItemKH.Name = "taskItemKH";
-            this.helpProvider1.SetShowHelp(this.taskItemKH, false);
-            this.taskItemKH.Size = new System.Drawing.Size(121, 36);
-            this.taskItemKH.TabIndex = 0;
-            this.taskItemKH.Text = "Khách Hàng";
-            this.taskItemKH.TextAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.taskItemKH.UseVisualStyleBackColor = false;
-            this.taskItemKH.Click += new System.EventHandler(this.taskItemKH_Click);
             // 
             // taskItemNCC
             // 
@@ -741,6 +749,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.expandoLP.ExpandedHeight = 207;
             this.expandoLP.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.expandoLP.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.expandoLP.Items.AddRange(new System.Windows.Forms.Control[] {
             this.taskItemBH,
             this.taskItemDH,
@@ -812,19 +821,12 @@
             this.taskItemSC.UseVisualStyleBackColor = false;
             this.taskItemSC.Click += new System.EventHandler(this.taskItemSC_Click);
             // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabel2.Text = "Quản Lý Cửa Hàng Hoa";
-            this.toolStripStatusLabel2.Click += new System.EventHandler(this.toolStripStatusLabel2_Click);
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(706, 508);
+            this.ClientSize = new System.Drawing.Size(763, 508);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.taskPane1);
             this.Controls.Add(this.toolStrip1);
@@ -833,6 +835,8 @@
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormMain";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.helpProvider1.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.Load += new System.EventHandler(this.FormMain_Load);

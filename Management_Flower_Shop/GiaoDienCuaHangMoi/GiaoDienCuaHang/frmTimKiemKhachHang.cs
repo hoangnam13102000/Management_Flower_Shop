@@ -41,8 +41,9 @@ namespace GiaoDienCuaHang
 
         }
 
-       
+        private void groupBoxTimKH_Enter(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

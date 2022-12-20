@@ -64,5 +64,10 @@ namespace GiaoDienCuaHang
                 e.Cancel = true;
             }
         }
+
+        private void labelTTNCC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

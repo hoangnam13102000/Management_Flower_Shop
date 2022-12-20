@@ -39,11 +39,11 @@
             this.buttonThem = new System.Windows.Forms.Button();
             this.groupBDSPDH = new System.Windows.Forms.GroupBox();
             this.listView2 = new System.Windows.Forms.ListView();
-            this.stt = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMAPDH = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMNCC = new System.Windows.Forms.ColumnHeader();
-            this.colHeaderMNV = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderNL = new System.Windows.Forms.ColumnHeader();
+            this.stt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMAPDH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMNCC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colHeaderMNV = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderNL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxTTPDH = new System.Windows.Forms.GroupBox();
             this.comboBoxMNV = new System.Windows.Forms.ComboBox();
             this.comboBoxMNCC = new System.Windows.Forms.ComboBox();
@@ -56,11 +56,11 @@
             this.labelPDH = new System.Windows.Forms.Label();
             this.groupBoxCTPDH = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeaderSTT = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMPDH = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderMSP = new System.Windows.Forms.ColumnHeader();
-            this.columnHeaderSL = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeaderSTT = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMPDH = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderMSP = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderSL = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBoxTTCTPDH = new System.Windows.Forms.GroupBox();
             this.textBoxCTMPDH = new System.Windows.Forms.TextBox();
             this.textBoxSL = new System.Windows.Forms.TextBox();
@@ -196,6 +196,7 @@
             this.listView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
+            this.listView2.HideSelection = false;
             this.listView2.Location = new System.Drawing.Point(3, 16);
             this.listView2.Name = "listView2";
             this.listView2.Size = new System.Drawing.Size(447, 87);
@@ -281,9 +282,9 @@
             this.labelMNV.AutoSize = true;
             this.labelMNV.Location = new System.Drawing.Point(3, 106);
             this.labelMNV.Name = "labelMNV";
-            this.labelMNV.Size = new System.Drawing.Size(75, 13);
+            this.labelMNV.Size = new System.Drawing.Size(79, 13);
             this.labelMNV.TabIndex = 3;
-            this.labelMNV.Text = "Mã Nhân Viên";
+            this.labelMNV.Text = "Tên Nhân Viên";
             // 
             // labelNL
             // 
@@ -299,9 +300,9 @@
             this.labelMNCC.AutoSize = true;
             this.labelMNCC.Location = new System.Drawing.Point(3, 66);
             this.labelMNCC.Name = "labelMNCC";
-            this.labelMNCC.Size = new System.Drawing.Size(95, 13);
+            this.labelMNCC.Size = new System.Drawing.Size(77, 13);
             this.labelMNCC.TabIndex = 1;
-            this.labelMNCC.Text = "Mã Nhà Cung Cấp";
+            this.labelMNCC.Text = "Nhà Cung Cấp";
             // 
             // labelMPDH
             // 
@@ -344,6 +345,7 @@
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
+            this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(3, 16);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(363, 126);

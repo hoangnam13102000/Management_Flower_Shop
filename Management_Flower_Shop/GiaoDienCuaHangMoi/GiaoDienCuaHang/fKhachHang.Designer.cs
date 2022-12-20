@@ -93,6 +93,7 @@
             this.groupBoxTT.TabIndex = 1;
             this.groupBoxTT.TabStop = false;
             this.groupBoxTT.Text = "Thông Tin";
+            this.groupBoxTT.Enter += new System.EventHandler(this.groupBoxTT_Enter);
             // 
             // textBox4
             // 

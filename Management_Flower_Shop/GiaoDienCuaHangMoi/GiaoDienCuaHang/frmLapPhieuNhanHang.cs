@@ -178,8 +178,10 @@ namespace GiaoDienCuaHang
             frmTimKiemPhieuNhanHang tkpnh = new frmTimKiemPhieuNhanHang();
             tkpnh.Show();
         }
-        
 
-        
+        private void labelMNCC_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

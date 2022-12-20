@@ -427,6 +427,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Name = "frmTimKiemNhaCungCap";
+            this.Text = "frmTimKiemNhaCungCap";
             this.Load += new System.EventHandler(this.frmTimKiemNhaCungCap_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
